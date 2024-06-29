@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react';
+import { Routes, Route } from "react-router-dom"
+import Nav from './componentes/nav.jsx';
+import PaginaEspecial from "./componentes/PaginaEspecial.jsx";
+import Centrodelapagina from './componentes/centrodelapagina.jsx';
+import "./style.css"
+import "./App.css"
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <div className="container-fluid">
+    <div className="row">
+        <Nav/>
+      </div>
+    </div>
+    <div className="container">
+      
+      <div className="row">
+        <Routes>
+          <Route path='/' element={ <Centrodelapagina />}></Route>
+          <Route path='/paginaprivada' element={<PaginaEspecial />} />
+
+        </Routes>
+     
+      
+      </div>
+      
+      </div>
     </div>
   );
 }

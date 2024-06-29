@@ -1,38 +1,79 @@
-.App {
+.imagen-podcast {
+  width: 100%;
+  border-radius: 7px;
+}
+a {
+  color: inherit 
+}
+.estatico-sidebar {
+  position: relative; /* Por defecto para pantallas pequeñas */
+}
+
+.margen {
+  margin: 0;
+}
+
+.negro {
+  color: black;
+}
+
+
+
+.margen-arriba-nav {
+  margin-top: 0px;
+}
+
+.margen-arriba-nav-sidebar {
+  margin-top: 22px;
+  margin-left: -2%;
+  
+}
+
+.margen-arriba-nav-form {
+  margin-top: 0px;
   text-align: center;
+    margin-left: 3.9%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .margen-arriba-nav-sidebar {
+   display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 992px) {
+  .margen-arriba-nav-form {
+    margin-right: 20%;
+    margin-left: 20%;
   }
 }
+
+/* Media Query para pantallas con un ancho mínimo de 1200px */
+@media (min-width: 995px) {
+  .estatico-sidebar {
+    position: fixed; /* Solo para pantallas XL o más grandes */
+  }
+
+  .margen-arriba-nav {
+    margin-top: 80px; /* Mantener el margen para pantallas grandes */
+  }
+
+  .margen-arriba-nav-sidebar {
+    margin-top: 80px;
+    
+    /* Mantener el margen para pantallas grandes */
+  }
+
+  .margen-arriba-nav-form {
+    margin-top: 88px;
+    margin-right: 4%;
+     /* Mantener el margen para pantallas grandes */
+  }
+}
+@media (min-width: 1600px) {
+  .margen-arriba-nav-form {
+    margin-right: 0%;
+    margin-left: 6%;
+  }
+}
+.margen-pdf{margin-right: 5px;}
